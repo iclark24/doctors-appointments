@@ -17,6 +17,9 @@
         <div class="description">
           <p>Physician details will go here</p>
         </div>
+         <div class="extra">
+        <%= link_to "Delete", physician_path(physician), method: :delete, class:"ui button red inverted"%>
+        </div>
       </div>
     </div>
   <% end %>

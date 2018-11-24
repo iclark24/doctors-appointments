@@ -1,5 +1,5 @@
 class PhysiciansController < ApplicationController
-  before_action :set_physician, only: [:edit, :update]
+  before_action :set_physician, only: [:edit, :update, :destroy]
 
   def index
     @physicians = Physician.all
