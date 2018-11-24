@@ -1,0 +1,25 @@
+
+<h2>Welcome <%= current_user.first_name %></h2>
+<hr />
+<%= link_to "Add Appointment", new_appointment_path, class: "ui button blue inverted" %>
+<h3>Your appointments</h3>
+<div class="ui divided items">
+  <% @appointments.each do |appointment| %>
+
+  
+    <div class="item">
+      <div class="ui small image">
+        <img src="https://robohash.org/<%= appointment.physician.full_name %>1?set=set4" />
+      </div>
+      <div class="content">
+        <a class="header"><%= link_to appointment.physician.full_name, edit_appointment_path(appointment)%></a>
+        <div class="meta">
+          <span>Details</span>
+        </div>
+        <div class="description">
+          <p>Appointment details will go here</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

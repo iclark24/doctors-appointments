@@ -1,0 +1,6 @@
+<h1>Physicians</h1>
+<hr />
+<%= link_to "Add Physician", new_physician_path, class: "ui button blue inverted" %>
+  <% @physicians.each do |physician| %>
+    <h3><%= link_to physician.full_name, edit_physician_path(physician) %></h3>
+  <% end %>

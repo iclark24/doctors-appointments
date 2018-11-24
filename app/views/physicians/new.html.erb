@@ -1,0 +1,10 @@
+<h1>New Physician</h1>
+<%= form_with(model: [@physician], local: true, class: "ui form" ) do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, class: "ui input" %>
+  <br />
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, class: "ui input"%>
+  <br />
+  <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>
