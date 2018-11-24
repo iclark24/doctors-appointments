@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
 
-  before_action :set_appointment, only: [:edit, :update]
+  before_action :set_appointment, only: [:edit, :update, :destroy]
   # before action :set_physicians, only: [:new, :edit]
 
   def index
@@ -40,7 +40,7 @@ class AppointmentsController < ApplicationController
 
   private
   def appointment_params
-    params.require(:appointment).permit(:physician_id)
+    params.require(:appointment).permit(:physician_id, :date, :time)
   end
 
   # don't just find by the appointment model or you may potentially be able to view other users appointments

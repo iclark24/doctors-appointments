@@ -1,6 +1,23 @@
 <h1>Physicians</h1>
 <hr />
 <%= link_to "Add Physician", new_physician_path, class: "ui button blue inverted" %>
+<div class="ui divided items">
   <% @physicians.each do |physician| %>
-    <h3><%= link_to physician.full_name, edit_physician_path(physician) %></h3>
+
+  
+    <div class="item">
+      <div class="ui small image">
+        <img src="https://robohash.org/<%= physician.full_name %>1?set=set4" />
+      </div>
+      <div class="content">
+        <a class="header"><%= link_to physician.full_name, edit_physician_path(physician)%></a>
+        <div class="meta">
+          <span>Details</span>
+        </div>
+        <div class="description">
+          <p>Physician details will go here</p>
+        </div>
+      </div>
+    </div>
   <% end %>
+</div>

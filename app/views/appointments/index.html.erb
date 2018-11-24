@@ -17,8 +17,12 @@
           <span>Details</span>
         </div>
         <div class="description">
-          <p>Appointment details will go here</p>
+          <p><%= appointment.date%></p>
+          <p><%=appointment.time%></p>
         </div>
+        <div class="extra">
+        <%= link_to "Delete", appointment_path(appointment), method: :delete, class:"ui button red inverted"%>
+      </div>
       </div>
     </div>
   <% end %>
